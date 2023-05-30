@@ -25,23 +25,23 @@
         </p>
         <h5>Vanilla Javascript Approach</h5>
         <pre><code class="language-javascript">let template = `
-&lt;div class="player-card"&gt; 
-  &lt;button class="btn btn-xs btn-danger remove" id="${player.id}"&gt;Remove&lt;/button&gt; 
-  &lt;div&gt; 
-    &lt;img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200" /&gt; 
-  &lt;/div&gt; 
-  &lt;div&gt; 
-    &lt;span&gt;${player.name}&lt;/span&gt; 
-  &lt;/div&gt; 
-  &lt;div&gt; 
-    &lt;span&gt;${player.position}&lt;/span&gt; 
-  &lt;/div&gt; 
-  &lt;div&gt; 
-    &lt;span&gt;${player.number}&lt;/span&gt; 
-  &lt;/div&gt; 
-&lt;/div&gt;;
-`
-document.getElementById('player').innerHTML = html;</code></pre>
+    &lt;div class="player-card"&gt; 
+      &lt;button class="btn btn-xs btn-danger remove" id="${player.id}"&gt;Remove&lt;/button&gt; 
+      &lt;div&gt; 
+        &lt;img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200" /&gt; 
+      &lt;/div&gt; 
+      &lt;div&gt; 
+        &lt;span&gt;${player.name}&lt;/span&gt; 
+      &lt;/div&gt; 
+      &lt;div&gt; 
+        &lt;span&gt;${player.position}&lt;/span&gt; 
+      &lt;/div&gt; 
+      &lt;div&gt; 
+        &lt;span&gt;${player.number}&lt;/span&gt; 
+      &lt;/div&gt; 
+    &lt;/div&gt;;
+    `
+    document.getElementById('player').innerHTML = html;</code></pre>
         <p>
           Writing a full scale application with techniques like above quickly
           become cumbersome and difficult to read. Thanks to Vue, HTML
@@ -50,19 +50,19 @@ document.getElementById('player').innerHTML = html;</code></pre>
         </p>
         <h5>Vue Approach</h5>
         <pre><code class="language-markup">&lt;div class="player-card"&gt;
-    &lt;div&gt;
-        &lt;img :src="player.photo" /&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;span&gt;{{state.player.name}}&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;span&gt;{{state.player.position}}&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;span&gt;{{state.player.number}}&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        &lt;div&gt;
+            &lt;img :src="player.photo" /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;span&gt;{{ state.player.name }}&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;span&gt;{{ state.player.position }}&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;span&gt;{{ state.player.number }}&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
         <p>
           What is nice about this approach is you don't have to leave your html
           while you are trying to figure out how you want something to look.
@@ -77,7 +77,11 @@ document.getElementById('player').innerHTML = html;</code></pre>
           then move on to the next section.
         </p>
       </div>
-      <exercise></exercise>
+      <exercise>
+
+
+
+      </exercise>
     </div>
   </div>
 </template>
@@ -90,7 +94,7 @@ export default {
   setup() {
     // @ts-ignore
     onMounted(() => Prism.highlightAll())
-    
+
     const state = reactive({
       val: "{{ Evaluate Javascript Code }}",
       player: {
@@ -109,5 +113,4 @@ export default {
 </script>
 
 
-<style scoped>
-</style>
+<style scoped></style>
